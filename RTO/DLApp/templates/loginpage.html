@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}LOGIN-PAGE{% endblock %}
+
+{% block content %}
+
+<body>
+    <h1>
+        <center> " <span style="color: white;"> Wellcome To Log-In page.</span> " </center>
+    </h1>
+    <hr>
+    <br>
+
+
+    <!-- <fieldset>
+        <legend>&sext; &sext; LOGIN FORM: &sext; &sext;</legend> -->
+        <form action="" method="POST">
+
+            {% csrf_token %}
+
+            {% if messages %}
+            <div class="alert alert-primary" role="alert">
+                {% for message in messages %}
+                {{ message }}
+                {% endfor %}
+            </div>
+            {% endif %}
+            <div>
+                <label for="username">User Name:</label>
+                <input type="text" name="username" required>
+            </div>
+
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" required>
+
+                <button>Submit</button>
+                <br><br>
+                <p>&sext; If You are New User then Click.<button><a href="/register/"
+                            style="color: white;">Register.</a></button> </p>
+
+
+        </form>
+
+    <!-- </fieldset> -->
+
+    <br>
+
+
+</body>
+{% endblock %}

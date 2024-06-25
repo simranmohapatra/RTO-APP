@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}DL UPDATE PAGE{% endblock %}
+
+{% block content %}
+
+<body>
+    <h1>
+        <center>Wellcome To Driving License Registration Portal.</center>
+    </h1>
+    <hr>
+    <br>
+
+    <!-- <fieldset>
+        <legend>&sext; &sext; DL Update FORM: &sext; &sext;</legend> -->
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+                <label for="dlname">Name:</label>
+                <input type="text" name="dlname" value="{{upp.dlname}}" required>
+            </div>
+
+            <div>
+                <label for="dlid">DL No:</label>
+                <input type="number" name="dlid" value="{{upp.dlid}}" required>
+
+            </div>
+            <div>
+                <label for="dlphno">Phno:</label>
+                <input type="number" name="dlphno" value="{{upp.dlphno}}" required>
+
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <input type="text" name="address" value="{{upp.address}}" required>
+            </div>
+
+            <button>Submit</button> <!-- onclick="location.href='/#DATABASE'" -->
+        </form>
+    <!-- </fieldset> -->
+</body>
+{% endblock %}

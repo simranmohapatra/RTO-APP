@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %} REGISTER PAGE {% endblock %}
+
+{% block content %}
+
+<body>
+    <h1>
+        <center> " <span style="color: white;"> Wellcome To Register page.</span> " </center>
+    </h1>
+    <hr>
+    <br>
+
+
+    <!-- <fieldset>
+        <legend>&sext; &sext; REGISTER FORM: &sext; &sext;</legend> -->
+        <form action="" method="POST">
+
+            {% csrf_token %}
+
+            {% if messages %}
+            <div class="alert alert-primary" role="alert">
+                {% for message in messages %}
+                {{ message }}
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <div>
+                <label for="First_name">First Name:</label>
+                <input type="text" name="first_name">
+            </div>
+
+            <div>
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name">
+            </div>
+
+            <div>
+                <label for="username">User Name:</label>
+                <input type="text" name="username" required>
+            </div>
+
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" required>
+
+
+                <button>Submit</button>
+                <br><br>
+                <p>&sext; If You Alredy Have Account. Click. <button><a href="/login"
+                            style="color: white;">Log-In.</a></button></p>
+
+
+        </form>
+    <!-- </fieldset> -->
+
+    <br>
+
+
+</body>
+
+{% endblock %}
